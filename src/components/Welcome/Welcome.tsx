@@ -1,6 +1,6 @@
-import estilo from'./Welcome.module.css';
+import estilo from './Welcome.module.css';
 
-function Welcome(){
+function Welcome() {
     return (
         <main className={estilo.principal}>
             <p>Seja bem-vindo(a) à biblioteca</p>
