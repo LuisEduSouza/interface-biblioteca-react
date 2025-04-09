@@ -1,30 +1,51 @@
-import esilo from './LoginForm.module.css';
+// Importa o tipo JSX do React para definir o tipo de retorno do componente
+import { JSX } from 'react';
 
-function LoginForm() {
+// Importa os estilos CSS específicos para o formulário de login
+import estilo from './LoginForm.module.css';
+
+// Declara o componente funcional LoginForm que retorna um elemento JSX
+function LoginForm(): JSX.Element {
     return (
-        <section className={esilo['form-section']}>
-            <form action="" className={esilo['form-login']}>
-                <h3>LOGIN</h3>
+        // Seção principal que contém o formulário de login, com classe de estilo personalizada
+        <section className={estilo['form-section']}>
+            
+            {/* Título do formulário */}
+            <h3>LOGIN</h3>
+            
+            {/* Início do formulário com classe de estilo personalizada */}
+            <form action="" className={estilo['form-login']}>
+
+                {/* Campo de e-mail com rótulo */}
                 <label>
-                    Email
-                    <input type="email"
-                        placeholder='Insira o seu e-mail'
-                        className={esilo['input-email-login']} />
+                    E-mail
+                    <input 
+                        type="email" // Define o tipo do input como e-mail
+                        placeholder='Informe o seu e-mail' // Texto de dica para o usuário
+                        className={estilo['input-email-login']} // Classe CSS personalizada
+                    />    
                 </label>
+
+                {/* Campo de senha com rótulo */}
                 <label>
                     Senha
-                    <input type="password"
-                        placeholder='Insira o sua senha'
-                        className={esilo['input-password-login']} />
+                    <input 
+                        type="password" // Define o tipo do input como senha
+                        placeholder='Informe sua senha' // Texto de dica para o usuário
+                        className={estilo['input-password-login']} // Classe CSS personalizada
+                    />    
                 </label>
 
-                <input
-                    type="button"
-                    value="Entrar" 
-                    className={esilo['input-button-login']} />
+                {/* Botão de login */}
+                <input 
+                    type="button" // Tipo botão (não envia o formulário por padrão)
+                    value="Entrar" // Texto exibido no botão
+                    className={estilo['input-button-login']} // Classe CSS personalizada
+                />
             </form>
         </section>
     );
 }
 
+// Exporta o componente para ser utilizado em outros arquivos do projeto
 export default LoginForm;
